@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width">
+<script src="client_script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Postal Calculator</title>
+</head>
+
+<body>	
+	<H1>Postal Service Pricing</h1>
+	<hr><hr>
+	<form method="post" action="/pricing">
+		Enter the weight of your item:
+		<input type="number" name="weight" step="0.1"> (oz.)
+		<br>
+		Select desired mail service:
+		<select name="mail_type">
+			<option value="0">Letters(Stamped)</option>
+			<option value="1">Letters(Metered)</option>
+			<option value="2">Large Envelopes(Flats)</option>
+			<option value="3">First-Class Package Service--Retail</option>
+		</select>
+		
+		<input type="submit" value="Get Pricing" ><br><br>
+	</form>
+</body>
+</html>

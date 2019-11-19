@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8888;
 const path = require('path');
-
+app.set('view engine','ejs');
 
 function letterStamped(weight) {
 
@@ -198,10 +198,11 @@ app.post('/pricing',function(req,res){
 		
 	}
 	
+	res.render('index', {data: {response: response}});
 	
 	
 	console.log(response);
-	res.send(response);
+	//res.send(response);
 	//res.render('<a href="../">Back</a>');
 	
 	app.use(express.static(__dirname));
